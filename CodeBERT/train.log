@@ -1,0 +1,28 @@
+06/13/2024 20:59:15 - WARNING - __main__ -   device: cuda, n_gpu: 4
+06/13/2024 20:59:19 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='/home/linzexu/codeNet_clf', output_dir='./saved_models', eval_data_file=None, test_data_file=None, model_name_or_path='microsoft/codebert-base', tokenizer_name='microsoft/codebert-base', block_size=256, do_train=True, do_eval=False, do_test=False, train_batch_size=8, eval_batch_size=16, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, warmup_steps=0, seed=123456, num_train_epochs=50, num_labels=10, n_gpu=4, device=device(type='cuda'))
+/home/linzexu/anaconda3/envs/torch/lib/python3.9/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+06/13/2024 20:59:21 - INFO - __main__ -   ***** Running training *****
+06/13/2024 20:59:21 - INFO - __main__ -     Num examples = 900
+06/13/2024 20:59:21 - INFO - __main__ -     Num Epochs = 50
+06/13/2024 20:59:21 - INFO - __main__ -     batch size = 8
+06/13/2024 20:59:21 - INFO - __main__ -     Total optimization steps = 5650
+  0%|          | 0/113 [00:00<?, ?it/s]  0%|          | 0/113 [00:09<?, ?it/s]
+inputs:torch.Size([8, 256])
+labels:torch.Size([8, 10])
+2: torch.Size([2, 256, 768])
+3: torch.Size([2, 768])
+2: torch.Size([2, 256, 768])
+3: torch.Size([2, 768])
+2: torch.Size([2, 256, 768])
+3: torch.Size([2, 768])
+2: torch.Size([2, 256, 768])
+3: torch.Size([2, 768])
+Traceback (most recent call last):
+  File "/home/linzexu/Mixup4Code/CodeBERT/run.py", line 446, in <module>
+    main()
+  File "/home/linzexu/Mixup4Code/CodeBERT/run.py", line 417, in main
+    train(args, train_dataset, model, tokenizer)
+  File "/home/linzexu/Mixup4Code/CodeBERT/run.py", line 181, in train
+    loss,logits = model(inputs,labels)
+TypeError: cannot unpack non-iterable NoneType object
